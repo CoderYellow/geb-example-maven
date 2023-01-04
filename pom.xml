@@ -91,17 +91,17 @@
         <drivers>
           <driver>
             <name>chromedriver</name>
-            <version>100.0.4896.20</version>
+            <version>108.0.5359.71</version>
             <platform>mac</platform>
           </driver>
           <driver>
             <name>chromedriver</name>
-            <version>100.0.4896.20</version>
+            <version>108.0.5359.71</version>
             <platform>linux</platform>
           </driver>
           <driver>
             <name>chromedriver</name>
-            <version>100.0.4896.20</version>
+            <version>108.0.5359.71</version>
             <platform>windows</platform>
           </driver>
         </drivers>
