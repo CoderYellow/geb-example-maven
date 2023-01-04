@@ -5,6 +5,7 @@
 */
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeDriverService
+import org.openqa.selenium.chrome.ChromeOptions
 import org.openqa.selenium.os.ExecutableFinder
 
 import static org.apache.commons.lang3.SystemUtils.IS_OS_LINUX
@@ -32,9 +33,12 @@ File findDriverExecutable() {
 
 driver = {
     ChromeDriverService.Builder serviceBuilder = new ChromeDriverService.Builder()
-        .usingAnyFreePort()
-        .usingDriverExecutable(findDriverExecutable())
-    new ChromeDriver(serviceBuilder.build())
+            .usingAnyFreePort()
+            .usingDriverExecutable(findDriverExecutable())
+    def options = new ChromeOptions()
+    options.addArguments("--headless")
+    options.addArguments("--disable-gpu")
+    new ChromeDriver(serviceBuilder.build(), options)
 }
 
 baseUrl = "http://gebish.org"
